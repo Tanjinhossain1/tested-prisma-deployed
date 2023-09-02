@@ -1,10 +1,12 @@
-import app from "./app"
+import app from './app'; // Use ES6-style import
+
+import config from './config/index'; // Use ES6-style import
 
 const port = process.env.PORT || 3000;
 
 async function bootstrap() {
   const server = app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
+    console.log(`Server running on port ${config.port}`);
   });
 
   const exitHandler = () => {
